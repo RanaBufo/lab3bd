@@ -1,0 +1,77 @@
+﻿@model Pizzeria.Models.AllWorker<Pizzeria.Models.Worker>
+@{
+    ViewData["Title"] = "Worker";
+}
+
+
+<form method="post" asp-controller="EditWorker" asp-action="ToEditWorker" name="workerId">
+    <table class="tabel-work2" align="center">
+        <thead class="thead-work">
+            <tr>
+                <th class="th-worker">
+                    Name
+                </th>
+                <th class="th-worker">
+                    Surname
+                </th>
+                <th class="th-worker">
+                    Post
+                </th>
+                <th class="th-worker">
+                    E-mail
+                </th>
+                <th class="th-worker">
+                    Phone
+                </th> 
+                <th>
+                    <button class="form-button-reg" asp-area="" asp-controller="Registration" asp-action="Index" value="" type="submit">Add</button>
+                </th>
+            </tr>
+        </thead>
+            <tbody>
+                @foreach(var obj in Model)
+            {
+                <tr>
+                    <td class="td-worker">
+                        @obj.WorkerName
+                    </td>
+                    <td class="td-worker">
+                        @obj.WorkerSurname
+                    </td>
+                    <td class="td-worker">
+                        @if (obj.IDWorker.StartsWith("CoK", StringComparison.OrdinalIgnoreCase))
+                        {
+                            @Html.Raw("Cook")
+                        }
+                        else if (obj.IDWorker.StartsWith("Man", StringComparison.OrdinalIgnoreCase))
+                        {
+                            @Html.Raw("Manager")
+                        }
+                        else
+                        {
+                            @Html.Raw("Director")
+                        }
+                    </td>
+                    <td class="td-worker">
+                        @obj.WorkerEmail
+                    </td>
+                    <td class="td-worker">
+                        @obj.WorkerPhone
+                    </td>
+                    
+                    <td>
+
+                        <button class="form-button-reg" name="workerId" type="submit" value="@obj.IDWorker">Edit</button>
+                        
+                       
+                    </td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+        
+    </form>
+
+
+   

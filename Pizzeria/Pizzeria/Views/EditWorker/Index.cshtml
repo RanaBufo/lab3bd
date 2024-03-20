@@ -1,0 +1,36 @@
+﻿@model Pizzeria.Models.Worker
+@{
+    ViewData["Title"] = "Edit";
+}
+<form method="post" class="form2" asp-controller="EditWorker" >
+    <h1 class="form-reg-title title-style">Edit</h1>
+    <input type="hidden" asp-for="IDWorker" value="@Model.IDWorker" />
+    <div class="form-group">
+        <input type="text" asp-for="WorkerName" class="form-input" id="name" placeholder=" " />
+        <label for="name" class="form-label">Name</label>
+        <span asp-validation-for="WorkerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="WorkerSurname" class="form-input" id="surname" placeholder=" " />
+        <label for="surname" class="form-label">Surname</label>
+        <span asp-validation-for="WorkerSurname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="WorkerPhone" class="form-input" id="number" placeholder=" " />
+        <label for="number" class="form-label">Phone number</label>
+        <span asp-validation-for="WorkerPhone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="WorkerEmail" class="form-input" id="mail" placeholder=" " />
+        <label for="mail" class="form-label">E-mail</label
+        <span asp-validation-for="WorkerEmail" class="text-danger"></span>
+    </div>
+    
+
+
+
+
+    <button class="form-button-reg3" asp-action="ToEditWorkerByObject" type="submit" value="Worker">Save</button>
+    <button class="form-button-reg2" name="workerId" asp-action="DeleteWorker" value="@Model.IDWorker" type="submit">Delete</button>
+
+</form>

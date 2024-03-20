@@ -1,0 +1,45 @@
+﻿@model Pizzeria.Models.Cocker
+@{
+    ViewData["Title"] = "NewCock";
+}
+<img src="~/image/klet.png" alt="EROR" class="png-fon2-reg" />
+
+<img src="~/image/2.png" alt="EROR" class="png-fon3-reg" />
+<img src="~/image/5.png" alt="EROR" class="png-fon4-reg" />
+
+<img src="~/image/klet.png" alt="EROR" class="png-fon5-reg" />
+
+<img src="~/image/klet.png" alt="EROR" class="png-fon6-reg" />
+
+<img src="~/image/klet.png" alt="EROR" class="png-fon7-reg" />
+
+<img src="~/image/klet.png" alt="EROR" class="png-fon8-reg" />
+
+<img src="~/image/klet.png" alt="EROR" class="png-fon10-reg" />
+
+<form method="post" class="form2">
+    <h1 class="form-reg-title title-style">Registration</h1>
+    <div class="form-group">
+        <input type="text" asp-for="Specialization" class="form-input" id="specialization" placeholder=" " />
+        <label for="specialization" class="form-label">Specialization</label>
+        @Html.ValidationMessageFor(model => model.Specialization)
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="ExperienceYears" value="0" class="form-input" id="experience" placeholder=" " />
+        <label for="experience" class="form-label">Experience Years</label>
+        @Html.ValidationMessageFor(model => model.ExperienceYears)
+    </div>
+   
+    <div>
+        <label>
+            <input type="checkbox" asp-for="HasFoodSafetyTraining" name="selectedFillings" />
+            Has Food Safety Training
+        </label>
+    </div>
+
+
+
+
+    <button class="form-button-reg" asp-action="NewCockAdd" value="@Model" type="submit">Registration</button>
+</form>
+<img src="~/image/4.png" alt="EROR" class="png-fon-reg" />

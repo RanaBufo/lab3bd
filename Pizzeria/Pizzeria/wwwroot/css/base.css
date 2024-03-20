@@ -1,0 +1,172 @@
+﻿@font-face {
+    font-family: "RifficFreeBold";
+    src: url(font/RifficFreeBold.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#newfont {
+    font-family: 'RifficFreeBold';
+}
+
+@keyframes tilt-n-move-shaking {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+header {
+    width: 100%;
+    height: 13vh;
+    box-sizing: border-box;
+    padding: 15px;
+    background: linear-gradient(#9FBB73, #9FBB73);
+    color: #EC8F5E;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.hh {
+    width: calc(100% - 60px);
+    height: 10vh;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #F1EB90;
+    color: #EC8F5E;
+    box-shadow: 3px 6px 16px #6C804D;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    margin: 30px 30px 30px 15px;
+}
+
+main {
+    flex-grow: 1;
+    min-height: 82vh;
+    padding: 0px;
+    margin-top: 18vh;
+}
+
+.icon{
+    width:7vh;
+    vertical-align: middle;
+
+    position: absolute;
+    left: 2.4%
+}
+
+.title-style {
+    font-size: 40pt;
+    font-family: RifficFreeBold;
+    color: #9A4444;
+}
+
+.title-Fernando {
+    position: absolute;
+    left: 7%;
+    top: 4%;
+    display: inline;
+}
+
+.icon-user {
+    width: 6.6vh;
+    position: absolute;
+    vertical-align:central;
+    right:auto;
+    top:10%;
+}
+    .icon-user:hover {
+        animation: tilt-n-move-shaking 0.25s forwards;
+    }
+
+.main-animation:hover {
+}
+
+.main-animation {
+    width: 5.6vh;
+    height: 8vh;
+    position: absolute;
+    vertical-align: central;
+    right: 2.79%;
+    top: 4%;
+}
+
+.main-text:focus,
+.main-text:hover{
+    color: #9A4444;
+}
+
+.main-text {
+    font-size: 13pt;
+    font-family: RifficFreeBold;
+    position: absolute; /* Изменили на absolute */
+    left: 10%; /* Изменили на left */
+    top: 85%; /* Изменили на 80% (вместо 11.6%) */
+    transform: translateY(-50%);
+    color: #EC8F5E;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+
+body {
+    background: #9FBB73;
+}
+
+    body::-webkit-scrollbar {
+        width: 0;
+    }
+
+.action-main {
+    position: relative;
+    left: 95%;
+    margin-top: 1.1%;
+    font-size: 14pt;
+    font-weight:bold;
+    color: #EC8F5E;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.action-main2 {
+    position: relative;
+    left: 86%;
+    margin-top: 1.1%;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #EC8F5E;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.action-main:focus,
+.action-main:hover, .action-main2:focus,
+.action-main2:hover {
+    color: #EC8F5E;
+    animation: tilt-n-move-shaking 0.25s forwards;
+}
+}

@@ -1,0 +1,57 @@
+﻿body {
+}
+
+.form-worker {
+    
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 16px #6C804D;
+    background: #F1EB90;
+    transform: translateY(66px);
+
+}
+.form-label {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.tabel-work {
+    align-content: center;
+    border: 3px;
+    width: 80% !important;
+    position: relative;
+    left: 10%;
+    
+}
+.tabel-work2 {
+    align-content: center;
+    border: 3px;
+    width: 80% !important;
+    position: relative;
+    left: 0%;
+}
+
+.th-worker, .td-worker {
+    padding: 10px 15px;
+    text-align: center;
+    
+    
+}
+.td-worker-img{
+    width: 30px !important;
+}
+
+.thead-work {
+    box-shadow: 0 4px 16px #6C804D;
+    background: #F1EB90;
+    border-top-left-radius: 30px; /* Закругляем верхний левый угол */
+    border-top-right-radius: 30px; /* Закругляем верхний правый угол */
+}
+
+    .th-worker {
+    
+}
+.td-worker {
+
+}

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Pizza>
+@{
+    ViewData["Title"] = "Pizza";
+}
+
+<form method="post" asp-controller="AddPizza" asp-action="Delete">
+
+
+    <table class="tabel-work2" align="center">
+    <thead class="thead-work">
+        <tr>
+            <th class="th-worker">
+                Pizza Name
+            </th>
+            <th class="th-worker">
+                PizzaPrice
+            </th>
+            <th class="th-worker">
+                Pizza Img
+            </th>
+            <th class="th-worker">
+                Pizza Filling
+            </th>
+                <th class ="th-worker">
+                    <button class="form-button-reg" asp-area="" asp-action="Index" asp-controller="AddPizza" type="submit">Add</button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td class="td-worker">
+                    @obj.PizzaName
+                </td>
+                <td class="td-worker">
+                    @obj.PizzaPrice
+                </td>
+                <td  >
+                        <img class="td-worker-img" src="~/image/@obj.PizzaImage" alt="EROR" />
+                </td>
+                <td class="td-worker">
+                    @obj.Description;
+                </td>
+                <td class="td-worker">
+                        <button class="form-button-reg" asp-controller="Pizza" asp-action="Delete" name="idPizza" asp-area="" value="@obj.IDPizza" type="submit">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+</form>

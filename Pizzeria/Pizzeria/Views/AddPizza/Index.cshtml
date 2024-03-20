@@ -1,0 +1,44 @@
+﻿@model Pizzeria.Models.PizzaAddModel
+@{
+    ViewData["Title"] = "Add pizza";
+}
+
+<form method="post" class="form2" asp-controller="AddPizza" asp-action="Details">
+    <h1 class="form-reg-title title-style">Add pizza</h1>
+    <div class="form-group">
+        <input type="text" asp-for="PizzaName" class="form-input" id="name" placeholder=" " />
+        <label for="name" class="form-label">Name</label>
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="PizzaImage" class="form-input" id="img" placeholder=" " />
+        <label for="img" class="form-label">Pizza Image</label>
+    </div>
+    <p>Fillings</p>
+    @foreach (var filling in Model.Fillings)
+    {
+
+        <div>
+            <label>
+                <input type="checkbox" name="selectedFillings" value="@filling" />
+                @filling
+            </label>
+        </div>
+    }
+    <p>Sause</p>
+    @foreach (var sauses in Model.Sauces)
+    {
+        @if(sauses != "None")
+        {
+            <div>
+            <label>
+                <input type="radio" name="souse" value="@sauses" />
+                @sauses
+            </label>
+        </div>
+        }
+        
+    }
+
+    <button class="form-button-reg"  type="submit">Add</button>
+</form>
+

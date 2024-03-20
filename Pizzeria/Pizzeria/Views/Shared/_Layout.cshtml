@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Pizzeria</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Pizzeria.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/registr.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/workers.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="hh">
+
+            <img src="~/image/pizza-icon-2.svg" alt="EROR" class="icon" />
+            <p class="title-style title-Fernando">Fernando's</p>
+            <a class="action-main" asp-area="" asp-action="Index" asp-controller="Workers">Worker</a>
+            <a class="action-main2" asp-area="" asp-action="Index" asp-controller="Pizza">Pizza</a>
+            </div>
+    </header>
+    <div class="prokrutka">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
